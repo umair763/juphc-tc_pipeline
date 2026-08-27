@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <span class="icon">💼</span>
+        <h1>Tax Calculator</h1>
+      </div>
+      <p class="subtitle">Cloud-Native Progressive Income Tax Estimation</p>
+    </header>
+
+    <main class="card">
+      <form id="tax-form">
+        <div class="form-group">
+          <label for="annual-income">Annual Income ($)</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input 
+              type="number" 
+              id="annual-income" 
+              placeholder="e.g. 75000" 
+              min="0" 
+              step="any" 
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" id="calculate-btn">Calculate Tax</button>
+      </form>
+
+      <div id="results" class="results-section hidden">
+        <h2>Tax Calculation Summary</h2>
+        <div class="grid-stats">
+          <div class="stat-card">
+            <span class="stat-label">Gross Income</span>
+            <span class="stat-value" id="gross-income-display">$0.00</span>
+          </div>
+          <div class="stat-card highlight">
+            <span class="stat-label">Total Tax Due</span>
+            <span class="stat-value tax-due" id="total-tax-display">$0.00</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Net Take-Home Pay</span>
+            <span class="stat-value" id="net-pay-display">$0.00</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Effective Tax Rate</span>
+            <span class="stat-value" id="effective-rate-display">0.00%</span>
+          </div>
+        </div>
+
+        <div class="breakdown-container">
+          <h3>Tax Bracket Breakdown</h3>
+          <table class="tax-table">
+            <thead>
+              <tr>
+                <th>Tax Bracket</th>
+                <th>Rate</th>
+                <th>Taxable Amount</th>
+                <th>Tax Owed</th>
+              </tr>
+            </thead>
+            <tbody id="breakdown-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Deployed with Docker &amp; IBM Cloud Tekton Pipelines</p>
+    </footer>
+  </div>
+
+  <script src="taxCalculator.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
