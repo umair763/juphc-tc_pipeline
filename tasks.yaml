@@ -27,3 +27,4 @@ spec:
       script: |
         #!/bin/sh
         npx jasmine
+

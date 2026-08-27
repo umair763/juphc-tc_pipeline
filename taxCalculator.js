@@ -44,3 +44,4 @@ function calculateTax(income) {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { calculateTax };
 }
+

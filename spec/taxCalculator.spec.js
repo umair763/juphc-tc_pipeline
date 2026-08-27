@@ -41,3 +41,4 @@ describe('Tax Calculator Unit Tests', () => {
     }).toThrowError('Invalid income: Income must be a valid number');
   });
 });
+

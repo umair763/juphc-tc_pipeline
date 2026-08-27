@@ -18,3 +18,4 @@ Step 6/6 : COPY taxCalculator.js /usr/share/nginx/html/
  ---> 5f28c29188e7
 Successfully built 5f28c29188e7
 Successfully tagged tax-calculator:1.0
+
