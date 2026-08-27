@@ -1,11 +1,12 @@
-ibmcloud ce application create --name tax-calculator --image us.icr.io/sn-labs-user/tax-calculator:1.0 --port 80
-Creating application 'tax-calculator'...
-Configuration 'tax-calculator' is waiting for a Revision to become ready.
-Ingress has not yet been reconciled.
-Waiting for load balancer to be ready.
-Run 'ibmcloud ce application get -n tax-calculator' to check the application status.
+ibmcloud ce application get --name tax-calculator
+Getting application 'tax-calculator'...
 OK
 
-Application 'tax-calculator' is created.
-URL: https://tax-calculator.us-south.codeengine.appdomain.cloud
-
+Name:          tax-calculator
+ID:            1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+Project Name:  tax-calculator-project
+Project ID:    9z8y7x6w-5v4u-3t2s-1r0q-9p8o7n6m5l4k
+Age:           2m
+Created:       2024-05-18T10:30:00Z
+URL:           https://tax-calculator.us-south.codeengine.appdomain.cloud
+Status:        Ready
